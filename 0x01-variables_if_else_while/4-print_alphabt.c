@@ -7,15 +7,14 @@
  */
 int manin(void)
 {
-	char c = 'a';
-	while (c <= 'z')
+	char c;
+       for (c = 'a'; c <= 'z'; c++)
 	{
 		if (c != 'q' && c != 'e')
 		{
 			putchar(c);
 		}
-		c++;
 	}
-	putchar("\n");
+	putchar(10);
 	return (0);
 }
