@@ -10,33 +10,34 @@
  */
 int main(void)
 {
-int a = '0';
-int b = '0';
-int c = '0';
+int i = '0';
+int j = '0';
+int k = '0';
 
-while (a <= '7')
+while (i <= '7')
 {
-while (b <= '8')
+while (j <= '8')
 {
-while (c <= '9')
+while (k <= '9')
 {
-if (a < b && b < c)				
+if (i < j && j < k)				
 {
-putchar(a);
-putchar(b);
-putchar(c);
-if (!(a == '7' && b == '8' && c == '9')
-continue;
+putchar(i);
+putchar(j);
+putchar(k);
+if (i == '7' && j == '8' && k == '9')
+{
 putchar(',');
 putchar(' ');
 }
-c++;
 }
-c = '0';
-b++;
+k++;
 }
-b = '0';
-a++;
+k = '0';
+j++;
+}
+j = '0';
+i++;
 }
 putchar('\n');
 return (0);
