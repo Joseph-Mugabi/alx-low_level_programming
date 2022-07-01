@@ -16,6 +16,6 @@ int manin(void)
 		}
 		c++;
 	}
-	puctchar("\n");
+	putchar('\n');
 	return (0);
 }
