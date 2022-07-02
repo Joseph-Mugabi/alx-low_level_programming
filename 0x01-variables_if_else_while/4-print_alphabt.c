@@ -7,19 +7,19 @@
  */
 int main(void)
 {
-	int ch;
+	int alphabets;
 
-	ch = 'a';
-		;
-        while (ch <= 'z' )
+	alphabets = 'a';
+
+        while (alphabets <= 'z' )
 	{
-		if (ch == 'q' || ch == 'e')
+		if (alphabets == 'q' || alphabets == 'e')
 		{
-			ch;
+			alphabets;
 			continue;
 		}
-		putchar(ch);
-		ch++;
+		putchar(alphabets);
+		alphabets++;
 	}
 	putchar('\n');
 	return (0);
