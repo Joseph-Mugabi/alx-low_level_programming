@@ -7,13 +7,20 @@
  */
 int manin(void)
 {
-	char c;
-       for (c = 'a'; c <= 'z'; c++)
+	int c;
+
+	c = 'a';
+		;
+        while (c <= 'z' )
 	{
-		if (c == 'q' && c == 'e')
+		if (c == 'q' || c == 'e')
 		{
-			putchar(c);
+			c;
+			continue;
 		}
+		putchar(c);
+		c++;
 	}
-	putchar(10);
-	return (0);}
+	putchar('\n');
+	return (0);
+}
