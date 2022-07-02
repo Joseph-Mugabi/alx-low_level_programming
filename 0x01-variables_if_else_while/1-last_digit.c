@@ -5,7 +5,7 @@
 /**
 * main - assign a random number to the variable n each time it is executed.
 * print the last digit of the number stored in the variable n.
-* Retun: Always 0(success)
+* Return: Always 0 (success)
 */
 int main(void)
 {
