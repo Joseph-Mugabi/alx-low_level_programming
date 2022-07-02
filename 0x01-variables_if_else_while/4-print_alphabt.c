@@ -7,20 +7,16 @@
  */
 int main(void)
 {
-	int alphabets;
-
-	alphabets = 'a';
-
-        while (alphabets <= 'z' )
+	char letters;
+	
+	for (letters = 'a'; letters <= 'z'; letters++)
 	{
-		if (alphabets == 'q' || alphabets == 'e')
-		{
-			alphabets;
-			continue;
-		}
-		putchar(alphabets);
-		alphabets++;
+		if (letters != 'e' && letters != 'q')
+			putchar(letters);
 	}
+
 	putchar('\n');
+
 	return (0);
+
 }
