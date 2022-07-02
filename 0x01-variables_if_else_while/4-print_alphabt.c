@@ -5,7 +5,7 @@
  * Print all the letters except q and e
  * Return: Always 0
  */
-int manin(void)
+int main(void)
 {
 	int ch;
 
