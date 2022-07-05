@@ -7,18 +7,17 @@
 */
 void print_alphabet_x10(void);
 {
-int m;
-int count;
+	int n, co;
 
-count = 0;
+	co = 0;
 
-while (count < 10)
-{
-for (m = 'a'; m <= 'z'; m++)
-{
-_putchar(m);
-}
-count++;
-_putchar('\n');
-}
+	while (co < 10)
+	{
+		for (n = 'a'; n <= 'z'; n++)
+		{	
+			_putchar(n);
+		}
+		co++;
+		_putchar('\n');
+	}
 }
