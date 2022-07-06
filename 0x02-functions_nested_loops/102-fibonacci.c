@@ -13,7 +13,7 @@ int main(void)
 	printf("%lu", bef);
 	for (i = 1; i < 50; i++)
 	{
-		printf("' %lu". aft);
+		printf("' %lu", aft);
 		aft += bef;
 		bef = aft - bef;
 	}
