@@ -12,8 +12,8 @@ void print_numbers(void)
 	for (a = 0; a < 10; a++)
 	{
 		_putchar(a);
+		a++;
 	}
 
-	_putchar(10);
 	_putchar('\n');
 }
