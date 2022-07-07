@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 /**
  * main - causes an infinite loo
  * Return: 0
  */
+
 int main(void)
 {
 	int i;
