@@ -5,5 +5,4 @@
 
 void positive_or_negative(int i);
 
-
-#endif /* HOLBERTON_H */
+#endif /* MAIN_H */
