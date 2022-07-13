@@ -5,7 +5,7 @@
 * @s: pointer to char params
 * Return: *s
 */
-char *cap_string(char *)
+char *cap_string(char *s)
 {
 	int i = 0;
 
