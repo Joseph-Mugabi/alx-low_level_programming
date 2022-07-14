@@ -2,49 +2,59 @@
 #include <stdio.h>
 
 /*
-* print_buffer - prints a buffer.
-* @b: buffer
-* @c: buffer to print
-* @size: integer size
+* print_line - prints s bytes of a buffer
+* @c: buffer
+* @s: bytes of buffer
+* @l: line of buffer
+*
 * Return: void
 */
 
+void print_line(char *c, int s, int l)
+{
+	int k, j;
+
+	for (j = 0; j <= 9; j++)
+	{
+		if (j <= s)
+			printf("%02x", c[l * 10 + j]);
+		else
+			printf(" ");
+		if (j % 2)
+			putchar(' ');
+	}
+	for (k = 0; k <= s; k++)
+	{
+		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
+			putchar(c[l * 10 + k]);
+		else
+			putchar('.');
+	}
+}
+/**
+ * print_buffer - prints a buffer
+ * @b: buffer to print
+ * @size: size of buffer
+ *
+ * Return: void
+ */
 void print_buffer(char *b, int size)
 {
-int o, p, q;
+	int i;
 
-o = 0;
-if (size <= 0)
-{
-printf("\n");
-return;
-}
-while (o < size)
-{
-p = size - o < 10 ? size - o : 10;
-printf("%08x: ", o);
-for (q = 0; q < 10; q++)
-{
-if (q < p)
-printf("%02x", *(b + o + q));
-else
-printf(" ");
-if (q % 2)
-{
-printf(" ");
-}
-}
-for (q = 0; q < p; q++)
-{
-int c = *(b + o + q);
-
-if (c < 32 || c > 132)
-{
-c = '.';
-}
-printf("%c", c);
-}
-printf("\n");
-o += 10;
-}
+	for (i = 0; i <= (size - 1) / 10 && size; i++)
+	{
+		printf("%08x: ", i * 10);
+		if (i < size / 10)
+		{
+			print_line(b, 9, i);
+		}
+		else
+		{
+			print_line(b, size % 10 - 1, i);
+		}
+		putchar('\n');
+	}
+	if (size == 0)
+		putchar('\n');
 }
