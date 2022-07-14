@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /*
-* print_line - prints s bytes of a buffer
-* @c: buffer
-* @s: bytes of buffer
-* @l: line of buffer
+* print_line - prints a s bytes of a buffer
+* @c: buffer to print
+* @s: bytes of buffer to print
+* @l: line of buffer to print
 *
 * Return: void
 */
