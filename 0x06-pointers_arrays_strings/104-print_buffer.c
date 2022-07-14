@@ -1,11 +1,13 @@
 #include "main.h"
 #include <stdio.h>
+
 /*
-* print_buffer - function that prints a buffer.
+* print_buffer - buffer.
 * @b: buffer
-* @size: buffer to point
-* Return: void
+* @size: integer size
+*
 */
+
 void print_buffer(char *b, int size)
 {
 int o, p, q;
