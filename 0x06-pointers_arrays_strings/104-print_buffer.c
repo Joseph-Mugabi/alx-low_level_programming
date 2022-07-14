@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /*
-* print_buffer - buffer.
+* print_buffer - prints a buffer.
 * @b: buffer
+* @c: buffer to print
 * @size: integer size
 *
 */
