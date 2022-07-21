@@ -40,11 +40,3 @@ int wildcmp(char *s1, char *s2)
 	else
 		return (0);
 }
-int main(void)
-{
-	int r;
-
-	r = wildcmp("main.c", "*.c");
-	printf("%d\n", r);
-	return (0);
-}
