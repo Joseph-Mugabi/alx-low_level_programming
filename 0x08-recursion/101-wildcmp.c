@@ -1,4 +1,3 @@
-#include "main.h"
 
 /**
 * substring_match - chech if a substring after wildcard matches s1.
