@@ -7,4 +7,7 @@
 ### 0x04-more_functions_nested_loops
 ### 0x05. C - Pointers, arrays and strings
 ### 0x06. C - More pointers, arrays and strings
-### 0x07-pointers_arrays_strings 
+### 0x07-pointers_arrays_strings
+### 0x08. C - Recursion
+### 0x09. C - Static libraries
+
