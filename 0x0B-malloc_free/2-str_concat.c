@@ -4,7 +4,7 @@
 /**
  * str_concat - string concatenating fn
  * @s1: string 1
- * @s: string 2
+ * @s2: string 2
  * Return: string 1 + string 2
  */
 char *str_concat(char *s1, char *s2)
