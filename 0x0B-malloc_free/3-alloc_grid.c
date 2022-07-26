@@ -32,7 +32,7 @@ int **alloc_grid(int width, int height)
 				free(a[i]);
 			}
 			free(a);
-			return (NULL):
+			return (NULL);
 		}
 		for (j = 0; j < width; j++) /* set array value to 0 */
 			a[i][j] = 0;
