@@ -11,35 +11,31 @@
 */
 int **alloc_grid(int width, int height)
 {
-	int i, j, k, l;
+	int i, j;
 	int **a;
 
-	if (width <= 0 || height <= 0)
+	if (width <= 0 || height <= 0) /*validate input */
 		return (NULL);
 
-	a = malloc(height * sizeof(int *));
-	if (a == NULL)
+	a = malloc(height * sizeof(int *));/*allocste memory for */
+	if (a == NULL) /* validate memory */
 	{
-		free(a);
 		return (NULL);
 	}
-	for (i = 0; i < height; i++)
+	for (i = 0; i < height; i++)/* allocating memory for column 0 */
 	{
 		a[i] = malloc(width * sizeof(int));
-		if (a[i] == NULL)
+		if (a[i] == NULL) /* validating memory */
 		{
-			for (j = i; j > 0; j--)
+			for (i = 0; i < height; j++)
 			{
-				free(a);
+				free(a[i]);
 			}
-			free(a[j]);
+			free(a);
 			return (NULL):
 		}
-	}
-	for (k = 0; k < height; k++)
-	{
-		for (l = 0; l < width; l++)
-			a[k][l] = 0;
+		for (j = 0; j < width; j++) /* set array value to 0 */
+			a[i][j] = 0;
 	}
 	return (a);
 }
