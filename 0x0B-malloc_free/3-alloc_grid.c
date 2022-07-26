@@ -10,30 +10,30 @@
 int **alloc_grid(int width, int height)
 {
 	int i, j;
-	int **a;
+	int **grid;
 
 	if (width <= 0 || height <= 0) /*validate input */
 		return (NULL);
 
-	a = malloc(height * sizeof(int *));/*allocste memory for */
-	if (a == NULL) /* validate memory */
+	grid = malloc(height * sizeof(int *));/*allocste memory for */
+	if (grid == NULL) /* validate memory */
 	{
 		return (NULL);
 	}
 	for (i = 0; i < height; i++)/* allocating memory for column 0 */
 	{
-		a[i] = malloc(width * sizeof(int));
-		if (a[i] == NULL) /* validating memory */
+		grid[i] = malloc(width * sizeof(int));
+		if (grid[i] == NULL) /* validating memory */
 		{
 			for (i = 0; i < height; j++)
 			{
-				free(a[i]);
+				free(grid[i]);
 			}
-			free(a);
+			free(grid);
 			return (NULL);
 		}
 		for (j = 0; j < width; j++) /* set array value to 0 */
-			a[i][j] = 0;
+			grid[i][j] = 0;
 	}
-	return (a);
+	return (grid);
 }
