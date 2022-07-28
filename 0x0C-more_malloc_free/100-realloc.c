@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * _realloc - allocate memory and set all values to 0
  * @ptr: pointer to the memory previously allocated
@@ -26,7 +26,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		if (p == NULL)
 			return (NULL);
 		else
-			return (0);
+			return (p);
 	}
 	p = malloc(new_size);
 	if (p == NULL)
