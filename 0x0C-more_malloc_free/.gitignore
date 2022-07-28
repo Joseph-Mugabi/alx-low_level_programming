@@ -6,3 +6,8 @@ a
 2-calloc
 3-main.c
 3-array_range
+100-main.c
+100-realloc
+101-mul 10 98
+101-mul.c 
+101-mul
