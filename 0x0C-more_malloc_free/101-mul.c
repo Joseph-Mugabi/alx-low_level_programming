@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	unsigned long mul;
+	unsigned long int mul;
 	int num1, num2;
 
 	if (argc != 3)
