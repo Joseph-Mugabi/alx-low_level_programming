@@ -2,7 +2,7 @@
 
 /**
  * main - prints current filename to std output
- * 
+ *
  *Return: 0
  */
 int main(void)
