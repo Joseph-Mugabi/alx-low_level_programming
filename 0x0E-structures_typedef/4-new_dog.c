@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
+#include <string.h>
 
 /**
  * len - find length of string
@@ -12,7 +13,7 @@ int len(char *str)
 {
 	int i;
 
-	for (i = 0; *(str + 1); i++)
+	for (i = 0; *(str + i); i++)
 		;
 	return (i);
 }
@@ -23,7 +24,7 @@ int len(char *str)
  *
  * Return: copy of original source
  */
-char *strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int i;
 
@@ -56,7 +57,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(dog1);
 			return (NULL);
 		}
-		dog1->name = strcpy(copy_of_name, name);
+		dog1->name = _strcpy(copy_of_name, name);
 	}
 	else
 		dog1->name = NULL;
@@ -69,7 +70,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(dog1);
 			return (NULL);
 		}
-		dog1->owner = strcpy(copy_of_owner, owner);
+		dog1->owner = _strcpy(copy_of_owner, owner);
 	}
 	else
 		dog1->owner = NULL;
