@@ -18,7 +18,7 @@ int len(char *str)
 	return (i);
 }
 /**
- * strcpy - copies the string pointed to by src,
+ * _strcpy - copies the string pointed to by src,
  * @dest: copy source to this buffer
  * @src: this is the source to copy
  *
