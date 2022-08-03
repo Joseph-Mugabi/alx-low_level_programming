@@ -7,7 +7,7 @@
  *
  * Return: pointer to correct op func.
  */
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
 		{"+", op_add},
