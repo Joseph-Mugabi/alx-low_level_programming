@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "3-calc.h"
+#include <stdio.h>
 
 /**
  * get_op_func - function to select correct operation func.
@@ -7,7 +8,7 @@
  *
  * Return: pointer to correct op func.
  */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
