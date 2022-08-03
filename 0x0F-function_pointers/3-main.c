@@ -1,7 +1,14 @@
-#include <stdio.h> 
-#include <stdlib.h> 
+#include <stdio.h>
+#include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * main - when user runs main,
+ * prints sum, difference, product, dividend, or remainder
+ * @argc: argument counter
+ * @argv: arguments
+ * Return: 0
+ */
 int main(int argc, char *argv[])
 {
 	int n1, n2;

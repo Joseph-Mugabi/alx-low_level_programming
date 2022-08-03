@@ -1,5 +1,5 @@
-#ifndef prototypes_h
-#define prototype_h
+#ifndef prototypes
+#define prototypes
 
 /**
  * struct op - Struct op
