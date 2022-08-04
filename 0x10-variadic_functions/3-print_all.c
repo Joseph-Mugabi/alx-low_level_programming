@@ -43,14 +43,14 @@ void print_string(va_list list)
 }
 /**
  * print_all - print varying input of ints, chars, floats, and strings
- * @format: array of chars 
+ * @format: array of chars
  */
 void print_all(const char * const format, ...)
 {
 	char *separator = "";
 	int i, j = 0;
 	va_list list;
-	
+
 	datatype choice[] = {
 		{'c', print_char},
 		{'i', print_int},
