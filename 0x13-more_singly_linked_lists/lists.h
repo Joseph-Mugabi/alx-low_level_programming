@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <stddef.h>
 /**
  * struct listint_s - singly linked list
  * @n: integer
@@ -24,13 +24,13 @@ typedef struct listint_s
  * @next: points to the next node
  *
  * Description: singly linked list of pointers
- */
+ 
 typedef struct listp_s
 {
 	void *p;
 	struct listp_s *next;
 }listp_t;
-
+*/
 
 int _putchar(char c);
 size_t print_listint(const listint_t *h);
