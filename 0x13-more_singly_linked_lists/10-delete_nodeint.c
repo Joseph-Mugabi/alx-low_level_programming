@@ -31,7 +31,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		j++;
 	}
 	next = prev->next;
-	prev->next = prev->next->next;
+	prev->next = (prev->next)->next;
 	free(next);
 
 	return (1);
