@@ -16,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 		return (uint);
 
 	/* this is to find the length */
-	while (b[len] !='\0')
+	while (b[len] != '\0')
 		len++;
 	len -= 1;
 
