@@ -12,25 +12,19 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int uint = 0;
 	int len = 0, j;
 
-	if (b == NULL)
-		return (uint);
+	if (!b)
+		return (0);
 
-	/* this is to find the length */
-	while (b[len] != '\0')
-		len++;
-	len -= 1;
-
-	/* iterate through the string  and if '1' then multiply by powr of 2 */
-	/* get powr of 2 via binary e.g 1<<3 = 1000 in binary = 8 */
-	j = 0;
-	while (b[j])
+	uint = 0;
+	for (len = 0; b[len] != '\0'; len++)
+		;
+	for (len--, j = 1; len >= 0; len--, j *= 2)
 	{
-		if ((b[len] != '0') && (b[j] != '1'))
-			return (uint);
-		if (b[j] == '1')
-			uint += (1 * (1 << len));
-		j++;
-		len--;
+		if (b[len] != '0' && b[len] != '1')
+			return (0);
+		if (b[len] & 1)
+			uint += j;
 	}
+
 	return (uint);
 }
