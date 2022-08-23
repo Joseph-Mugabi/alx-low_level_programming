@@ -1,6 +1,20 @@
 #include "main.h"
 
 /**
+ *  _close_ - close a opened file
+ *  @fd: file descriptor
+ */
+
+void _close_(int fd)
+{
+	if (close(fd) == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+
+/**
  * main - copies the content of a file to another file.
  * @argc: number of arguments
  * @argv: pointer to content of arguments
@@ -9,7 +23,7 @@
 
 int main(int argc, char *argv[])
 {
-	int fdo1, fdo2, fdr, fdw, cl, cl2;
+	int fdo1, fdo2, fdr, fdw;
 	char arr[1024], e1[] = "Error: Can't read from file";
 	char e2[] = "Error: Can't write from file";
 
@@ -44,12 +58,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	cl = close(fdo1);
-	cl2 = close(fdo2);
-	if ((cl == -1) || (cl2 == -1))
-	{
-		dprintf(2, "Error: Can't close fd %s\n", argv[1]);
-		exit(100);
-	}
+	_close_(fdo1);
+	_close_(fdo2);
 	return (0);
 }
