@@ -9,7 +9,7 @@ void _close_(int fd)
 {
 	if (close(fd) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
