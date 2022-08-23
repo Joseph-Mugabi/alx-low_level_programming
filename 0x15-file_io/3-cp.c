@@ -23,34 +23,40 @@ void _close_(int fd)
 
 int main(int argc, char *argv[])
 {
-	int fdo1, fdo2, fdr;
+	int fdo1, fdo2, fdr, fdw;
 	char arr[1024];
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to \n");
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fdo1 = open(argv[1], O_RDONLY);
-	if (fdo1 < 0)
+	if (fdo1 == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fdo2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fdo2 < 0)
+	fdo2 = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
+	if (fdo2 == -1)
 	{
-		dprintf(2, "Error: Can't write from file %s\n", argv[2]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[2]);
 		exit(99);
 	}
-	while ((fdr = read(fdo1, arr, 1024)) > 0)
-	{
-		if (write(fdo2, arr, fdr) != fdr)
+	do {
+		fdr = read(fdo1, arr, 1024);
+		if (fdr == -1)
 		{
-			dprintf(2, "Error: Can't write from file %s\n", argv[2]);
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
-	}
+		fdw = write(fdo2, arr, fdr);
+		if (fdw != fdr || fdr == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[2]);
+			exit(99);
+		}
+	} while (fdr == 1024);
 	_close_(fdo1);
 	_close_(fdo2);
 	return (0);
