@@ -23,7 +23,7 @@ void _close_(int fd)
 
 int main(int argc, char *argv[])
 {
-	int fdo1, fdo2, fdr, fdw;
+	int fdo1, fdo2, fdr;
 	char arr[1024], e1[] = "Error: Can't read from file";
 	char e2[] = "Error: Can't write from file";
 
@@ -51,11 +51,11 @@ int main(int argc, char *argv[])
 			dprintf(2, arr, argv[1]);
 			exit(98);
 		}
-		fdw = write(fdo2, arr, fdr);
-		if (fdw == -1)
+		
+		if (write(fdo2, arr, fdr) != fdr)
 		{
 			dprintf(2, "%s %s\n", e2, argv[2]);
-			exit(99);
+			exit(98);
 		}
 	}
 	_close_(fdo1);
