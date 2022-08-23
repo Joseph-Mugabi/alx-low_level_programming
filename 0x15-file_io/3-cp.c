@@ -45,13 +45,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	while ((fdr = read(fdo1, arr, 1024)) > 0)
-	{
-		if (fdr == -1)
-		{
-			dprintf(2, arr, argv[1]);
-			exit(98);
-		}
-		
+	{	
 		if (write(fdo2, arr, fdr) != fdr)
 		{
 			dprintf(2, "%s %s\n", e2, argv[2]);
