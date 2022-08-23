@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	while ((fdr = read(fdo1, arr, 1024)) > 0)
-	{	
+	{
 		if (write(fdo2, arr, fdr) != fdr)
 		{
 			dprintf(2, "Error: Can't write from file %s\n", argv[2]);
