@@ -32,17 +32,17 @@ int main(int argc, char *argv[])
 	}
 	while ((fdr = read(fdo1, arr, 1024)) > 0)
 	{
+		if (fdr == -1)
+		{
+			dprintf(2, arr, argv[1]);
+			exit(98);
+		}
 		fdw = write(fdo2, arr, fdr);
 		if (fdw == -1)
 		{
 			dprintf(2, "%s %s\n", e2, argv[2]);
 			exit(99);
 		}
-	}
-	if (fdr == -1)
-	{
-		dprintf(2, "%s %s\n", e1, argv[1]);
-		exit(98);
 	}
 	cl = close(fdo1);
 	cl2 = close(fdo2);
