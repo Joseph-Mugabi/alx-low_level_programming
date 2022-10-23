@@ -24,13 +24,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(ht);
 		return (NULL);
 	}
+	ht->size = size;
+	ht->array = array;
 	while (j < size)
 	{
 		array[j] = NULL;
 		j++;
 	}
-	ht->size = size;
-	ht->array = array;
 
 	return (ht);
 }
