@@ -2,7 +2,7 @@
 
 /**
  *  hash_table_print - print key/values of hash table in order
- *   
+ *
  *  @ht: hash table
  */
 void hash_table_print(const hash_table_t *ht)
