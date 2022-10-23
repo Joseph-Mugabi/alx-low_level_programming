@@ -2,7 +2,7 @@
 
 /**
  * hash_djb2 - a hash function implementing the djb2 algorithm.
- * 
+ *
  * @str: string used to generate the hash value
  *
  * Return: hash value
