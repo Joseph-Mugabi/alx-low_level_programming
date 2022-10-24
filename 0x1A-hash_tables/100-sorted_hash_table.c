@@ -127,7 +127,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		tmp = tmp->next;
 	}
 	shnode = create_shash_node(key, value);
-	if(!shnode)
+	if (!shnode)
 		return (0);
 	shnode->next = ht->array[idx];
 	ht->array[idx] = shnode;
